@@ -5,400 +5,225 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Amit Mothiya - CV</title>
 
-  <!-- Bootstrap & FontAwesome -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
   <style>
-    /* ===== GENERAL LAYOUT ===== */
     body {
       font-family: "Poppins", sans-serif;
-      background: linear-gradient(135deg, #e6eefc, #f8f9fb);
-      color: #2d2d2d;
-      padding: 20px 10px;
-      -webkit-print-color-adjust: exact !important;
+      background: #eef4f3;
+      color: #333;
+      margin: 0;
+      padding: 25px;
     }
 
     .cv-container {
-      max-width: 1200px;
-      background: #ffffff;
-      margin: auto;
-      border-radius: 20px;
-      padding: 40px 50px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-      border-top: 8px solid #007bff;
-      transition: all 0.4s ease;
-    }
-
-    .cv-container:hover {
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-      transform: scale(1.01);
+      max-width: 900px;
+      background: #fff;
+      margin: 30px auto;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      padding: 50px 40px;
     }
 
     /* ===== HEADER ===== */
     .cv-header {
       text-align: center;
-      margin-bottom: 40px;
-      border-bottom: 3px solid #007bff;
-      padding-bottom: 20px;
+      border-bottom: 3px solid #009688;
+      padding-bottom: 25px;
+      margin-bottom: 35px;
     }
 
     .cv-header h1 {
       font-size: 2.5rem;
       font-weight: 700;
-      color: #004085;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+      color: #004d40;
+      margin-bottom: 8px;
     }
 
-    .cv-header h2 {
-      color: #007bff;
-      font-size: 1.2rem;
+    .cv-header h4 {
       font-weight: 500;
+      color: #009688;
+      margin-bottom: 15px;
     }
 
     .cv-header p {
       font-size: 1rem;
-      margin: 6px 0;
       color: #444;
+      margin: 5px 0;
     }
 
     .cv-header a {
-      color: #007bff;
+      color: #009688;
       text-decoration: none;
-      transition: 0.2s;
     }
-
     .cv-header a:hover {
       text-decoration: underline;
     }
 
-    /* ===== SECTION HEADINGS ===== */
+    /* ===== SECTION ===== */
+    .section {
+      margin-bottom: 35px;
+    }
+
     .section-title {
       font-size: 1.4rem;
       font-weight: 600;
-      color: #004085;
-      margin-top: 40px;
-      margin-bottom: 20px;
-      position: relative;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
+      color: #00695c;
+      text-transform: uppercase;
+      border-left: 5px solid #009688;
+      padding-left: 10px;
+      margin-bottom: 15px;
     }
 
-    .section-title::after {
-      content: "";
-      position: absolute;
-      bottom: -6px;
-      left: 0;
-      width: 90px;
-      height: 3px;
-      background: linear-gradient(90deg, #007bff, #6610f2);
-      border-radius: 2px;
+    .section p, .section li {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: #333;
     }
 
-    .section-title i {
-      color: #007bff;
+    .section ul {
+      padding-left: 20px;
     }
 
-    /* ===== SECTION CARDS ===== */
-    .section-card {
-      background: #f9fbff;
-      border: 1px solid #e0e6f7;
-      border-radius: 15px;
-      padding: 25px 30px;
-      margin-bottom: 25px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
-      transition: all 0.3s;
-    }
-
-    .section-card:hover {
-      background: #eef3fb;
-      transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-    }
-
-    .section-card h6 {
-      font-weight: 600;
-      color: #003366;
-      font-size: 1rem;
-      margin-bottom: 6px;
-    }
-
-    .section-card p {
-      font-size: 0.95rem;
-      margin-bottom: 8px;
-      color: #555;
-    }
-
-    ul {
-      margin-left: 20px;
-    }
-
-    ul li {
-      margin-bottom: 5px;
-      font-size: 0.95rem;
-    }
-
-    /* ===== SKILLS LIST ===== */
+    /* ===== SKILLS ===== */
     .skills-list li {
-      background: #f1f5ff;
-      border: 1px solid #cdddfc;
-      border-radius: 6px;
-      padding: 6px 10px;
       display: inline-block;
-      margin: 5px 6px;
-      font-size: 0.9rem;
-      color: #004085;
+      background: #e0f2f1;
+      color: #004d40;
+      border-radius: 8px;
+      padding: 8px 12px;
+      margin: 5px 5px;
       font-weight: 500;
-      transition: 0.2s;
+      border: 1px solid #b2dfdb;
+      transition: 0.3s;
     }
 
     .skills-list li:hover {
-      background: #007bff;
-      color: white;
-      border-color: #007bff;
+      background: #009688;
+      color: #fff;
     }
 
     /* ===== FOOTER ===== */
-    .footer {
+    .cv-footer {
       text-align: center;
-      margin-top: 40px;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       color: #666;
       border-top: 1px solid #ddd;
-      padding-top: 10px;
+      padding-top: 15px;
+      margin-top: 25px;
     }
 
-    /* ===== RESPONSIVE DESIGN ===== */
-    @media (max-width: 992px) {
-      .cv-container {
-        padding: 30px 35px;
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 576px) {
+      body {
+        padding: 15px;
       }
-
+      .cv-container {
+        padding: 30px 20px;
+      }
       .cv-header h1 {
         font-size: 2rem;
       }
-
-      .cv-header h2 {
-        font-size: 1.1rem;
-      }
-
       .section-title {
-        font-size: 1.25rem;
-      }
-
-      .section-card {
-        padding: 20px;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .cv-container {
-        padding: 25px 20px;
-      }
-
-      .cv-header h1 {
-        font-size: 1.8rem;
-      }
-
-      .cv-header h2 {
-        font-size: 1rem;
-      }
-
-      .cv-header p {
-        font-size: 0.9rem;
-      }
-
-      .section-title {
-        font-size: 1.15rem;
-      }
-
-      .section-card {
-        padding: 18px;
-      }
-
-      .skills-list li {
-        font-size: 0.85rem;
-      }
-    }
-
-    @media (max-width: 576px) {
-      .cv-header h1 {
-        font-size: 1.5rem;
-      }
-
-      .cv-header h2 {
-        font-size: 0.95rem;
-      }
-
-      .cv-container {
-        border-radius: 10px;
-        padding: 20px 15px;
-      }
-
-      .section-card {
-        padding: 15px;
-      }
-
-      .skills-list li {
-        display: block;
-        width: 100%;
-        text-align: center;
-      }
-    }
-
-    /* ===== PRINT STYLES ===== */
-    @page {
-      size: A4;
-      margin: 10mm;
-    }
-
-    @media print {
-      body {
-        background: white !important;
-      }
-      .cv-container {
-        box-shadow: none;
-        border-radius: 0;
-        margin: 0;
-        padding: 15mm;
-      }
-      .footer {
-        display: none;
+        font-size: 1.2rem;
       }
     }
   </style>
 </head>
 <body>
-
   <div class="cv-container">
+    <!-- HEADER -->
     <div class="cv-header">
-      <h1>Amit R. Mothiya</h1>
-      <h2>C#.NET & Angular Developer</h2>
+      <h1>Amit Mothiya</h1>
+      <h4>C#.NET & Angular Developer</h4>
       <p>
-        <i class="fas fa-envelope"></i> 
-        <a href="mailto:mothiyaamit8@gmail.com">mothiyaamit8@gmail.com</a> &nbsp;|&nbsp;
-        <i class="fas fa-phone"></i> +91 89808 43332 &nbsp;|&nbsp;
-        <i class="fas fa-map-marker-alt"></i> Ahmedabad, India
+        <i class="fa fa-envelope"></i> 
+        <a href="mailto:mothiyaamit8@gmail.com">mothiyaamit8@gmail.com</a> |
+        <i class="fa fa-phone"></i> +91 89808 43332 |
+        <i class="fa fa-map-marker-alt"></i> Ahmedabad, India
       </p>
     </div>
 
-    <!-- Summary -->
+    <!-- SUMMARY -->
     <div class="section">
-      <div class="section-title"><i class="fas fa-user"></i> Summary</div>
-      <div class="section-card">
-        <p>
-          Experienced C#.NET and Angular Developer with over 3 years of experience building scalable web applications using .NET Core and Angular frameworks. 
-          Strong in API integration, SQL, and application optimization. Skilled in end-to-end software development, collaborating across teams to deliver high-quality enterprise solutions.
-        </p>
-      </div>
+      <div class="section-title">Summary</div>
+      <p>Experienced C#.NET and Angular Developer with 4+ years of experience building scalable web apps using .NET Core and Angular. Skilled in backend APIs, SQL, and full-stack development for enterprise solutions.</p>
     </div>
 
-    <!-- Education -->
+    <!-- EXPERIENCE -->
     <div class="section">
-      <div class="section-title"><i class="fas fa-graduation-cap"></i> Education</div>
-      <div class="section-card">
-        <ul class="mb-0">
-          <li><strong>M.C.A (Information Technology)</strong> – Saurashtra University, Rajkot (2021)</li>
-          <li><strong>B.C.A (Information Technology)</strong> – M.K Bhavnagar University (2018)</li>
-        </ul>
-      </div>
+      <div class="section-title">Experience</div>
+      <ul>
+        <li><strong>Software Developer – Brodosy Technology Pvt Ltd</strong> (Mar 2024 – Present)</li>
+        <li><strong>Developer – Grapes Tech Solutions</strong> (Oct 2022 – Feb 2024)</li>
+        <li><strong>.NET Developer – ForeFront Infotech</strong> (Jan 2021 – Jan 2022)</li>
+      </ul>
     </div>
 
-    <!-- Experience -->
+    <!-- PROJECTS -->
     <div class="section">
-      <div class="section-title"><i class="fas fa-briefcase"></i> Professional Experience</div>
-
-      <div class="section-card">
-        <h6>Software Developer – Brodos India Pvt Ltd</h6>
-        <p><em>Mar 2025 – Present</em></p>
-        <ul>
-          <li>Contributing to backend modules and Angular UI enhancements.</li>
-          <li>Handling deployment, system integration, and performance optimization.</li>
-        </ul>
-      </div>
-
-      <div class="section-card">
-        <h6>C#.NET and Angular Developer – Grapes Tech Solutions</h6>
-        <p><em>Oct 2022 – Feb 2025</em></p>
-        <ul>
-          <li>Develop and maintain enterprise-level web applications using .NET Core and Angular.</li>
-          <li>Implement advanced CRUD operations, schedulers, and background queues.</li>
-          <li>Design role-based dashboards and real-time device monitoring tools.</li>
-        </ul>
-      </div>
-
-      <div class="section-card">
-        <h6>C#.NET Developer – ForeFront Infotech</h6>
-        <p><em>Jan 2021 – Jan 2022</em></p>
-        <ul>
-          <li>Developed backend systems and optimized database queries.</li>
-          <li>Worked closely with clients to implement technical improvements.</li>
-        </ul>
-      </div>
+      <div class="section-title">Projects</div>
+      <ul>
+        <li><strong>Morris-Ismart:</strong> Real-time monitoring system with .NET Core and Angular.</li>
+        <li><strong>EastOrange-Ismart:</strong> Advanced analytics dashboards for situational awareness.</li>
+		<li><strong>FleetLynk:</strong> It’s used by logistics companies, transport fleets, and trucking businesses to track, manage, and analyze their vehicles in real time.</li>
+      </ul>
     </div>
 
-    <!-- Skills -->
+    <!-- SKILLS -->
     <div class="section">
-      <div class="section-title"><i class="fas fa-code"></i> Software Skills</div>
-      <div class="section-card">
-        <ul class="skills-list list-unstyled">
-          <li>C#</li>
-          <li>.NET Core</li>
-          <li>Angular</li>
-          <li>JavaScript</li>
-          <li>TypeScript</li>
-          <li>SQL Server</li>
-          <li>Entity Framework</li>
-          <li>AJAX</li>
-          <li>Git</li>
-          <li>Postman</li>
-          <li>IIS</li>
-          <li>Microservices</li>
-        </ul>
-      </div>
+      <div class="section-title">Skills</div>
+      <ul class="skills-list list-unstyled">
+        <li>C#</li>
+        <li>.NET Core</li>
+        <li>Entity Frameworke</li>
+		<li>Plugin</li>
+		<li>Database - MSSQL</li>
+		<li>MVC</li>
+        <li>Angular</li>
+        <li>JavaScript</li>
+		<li>Juery</li>
+        <li>TypeScript</li>
+        <li>SQL Server</li>
+        <li>Git</li>
+        <li>PowerBi</li>
+		<li>Deployement - IIS</li>
+		<li>NOP-Commerce</li>
+      </ul>
     </div>
 
-    <!-- Projects -->
+    <!-- LANGUAGES -->
     <div class="section">
-      <div class="section-title"><i class="fas fa-lightbulb"></i> Project Highlights</div>
-      <div class="section-card">
-        <ul>
-          <li><strong>Morris-Ismart:</strong> Real-time monitoring system built with .NET Core and Angular.</li>
-          <li><strong>EastOrange-Ismart:</strong> Enhanced situational analysis and response dashboards.</li>
-          <li><strong>Newark-Ismart:</strong> Role-based management with device tracking extensions.</li>
-        </ul>
-      </div>
+      <div class="section-title">Languages</div>
+      <ul>
+        <li>English – Intermediate</li>
+        <li>Hindi – Working</li>
+		<li>Gujarati – Professional</li>
+      </ul>
     </div>
 
-    <!-- Languages -->
+    <!-- EDUCATION -->
     <div class="section">
-      <div class="section-title"><i class="fas fa-language"></i> Languages</div>
-      <div class="section-card">
-        <ul class="mb-0">
-          <li>English – Full Professional Proficiency</li>
-          <li>Hindi – Professional Working Proficiency</li>
-        </ul>
-      </div>
+      <div class="section-title">Education</div>
+      <ul>
+        <li>M.C.A – Saurashtra University (2021)</li>
+        <li>B.C.A – M.K Bhavnagar University (2018)</li>
+		<li>H.S.E.B - Seth M.N HIGH School (2015)</li>
+		<li>G.S.E.B - Seth M.N HIGH School (2013)</li>
+      </ul>
     </div>
 
-    <!-- Declaration -->
+    <!-- DECLARATION -->
     <div class="section">
-      <div class="section-title"><i class="fas fa-pen"></i> Declaration</div>
-      <div class="section-card">
-        <p>
-          I hereby declare that the information provided above is true and correct to the best of my knowledge.
-        </p>
-        <p><strong>Amit R. Mothiya</strong></p>
-      </div>
+      <div class="section-title">Declaration</div>
+      <p>I hereby declare that the information provided is true to the best of my knowledge.</p>
     </div>
 
-    <div class="footer">
-      © 2025 Amit R. Mothiya | Designed with 💙 Bootstrap & Custom CSS | A4 Print Ready
+    <!-- FOOTER -->
+    <div class="cv-footer">
+      &copy; 2025 Amit Mothiya — C#.NET & Angular Developer
     </div>
   </div>
-
 </body>
 </html>
